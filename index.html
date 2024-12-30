@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>日本地址搜尋系統</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://maps.googleapis.com/maps/api/js?key=YOUR_ACTUAL_API_KEY&libraries=places"></script>
+</head>
+<body>
+    <div class="container">
+        <h1>日本地址搜尋系統</h1>
+        
+        <div class="search-container">
+            <input 
+                type="text" 
+                id="searchInput" 
+                placeholder="輸入日本地址或景點名稱..."
+            >
+            <button id="searchButton">搜尋</button>
+        </div>
+
+        <div class="result-container">
+            <div class="address-details">
+                <div id="addressResult">
+                    <h3>地址資訊</h3>
+                    <p id="japaneseAddress"></p>
+                    <p id="postalCode"></p>
+                    <p id="englishAddress"></p>
+                </div>
+                <button id="copyButton" class="copy-btn">複製郵遞區號</button>
+                <button id="navigationButton" class="nav-btn">開啟導航</button>
+            </div>
+            <div id="map"></div>
+        </div>
+
+        <div class="history-container">
+            <h3>搜尋紀錄</h3>
+            <ul id="searchHistory"></ul>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html> 
